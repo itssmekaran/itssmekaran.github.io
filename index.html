@@ -4,108 +4,196 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Karan | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f172a;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #0f172a, #020617);
       color: #e5e7eb;
       line-height: 1.6;
     }
-    header {
-      padding: 80px 20px;
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, #6366f1, #22d3ee);
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      color: #cbd5f5;
+    }
+
+    .hero a {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 14px 34px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
       color: #020617;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease;
     }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+
+    .hero a:hover {
+      transform: scale(1.05);
     }
-    header p {
-      font-size: 1.2rem;
-    }
+
+    /* SECTIONS */
     section {
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 90px 20px;
     }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #38bdf8;
+
+    section h2 {
+      font-size: 2.3rem;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #7dd3fc;
     }
-    .card {
-      background: #020617;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
+
+    /* GLASS CARD */
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 35px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
     }
+
+    .glass:hover {
+      transform: translateY(-8px);
+    }
+
+    /* SKILLS GRID */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .skill {
+      text-align: center;
+      padding: 25px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 30px;
-      background: #020617;
+      padding: 40px 20px;
       color: #94a3b8;
+      background: #020617;
     }
-    a {
-      color: #38bdf8;
+
+    footer a {
+      color: #7dd3fc;
       text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.6rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Karan</h1>
-  <p>Talent Acquisition | HR | People & Culture</p>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Karan</h1>
+    <p>Talent Acquisition • HR • People & Culture</p>
+    <a href="#about">Explore My Journey</a>
+  </div>
+</div>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
   <h2>About Me</h2>
-  <div class="card">
+  <div class="glass">
     <p>
-      I am a passionate Talent Acquisition professional with hands-on experience
-      in hiring, people operations, and building strong teams. My journey has been
-      about connecting the right people with the right opportunities while growing
-      continuously in the HR space.
+      I’m a people-focused Talent Acquisition professional passionate about building
+      strong teams and meaningful careers. My journey has been about understanding
+      people, aligning talent with business needs, and continuously evolving in the
+      HR ecosystem.
     </p>
   </div>
 </section>
 
+<!-- SKILLS -->
 <section>
   <h2>Skills</h2>
-  <div class="card">
-    <ul>
-      <li>Talent Acquisition & Recruitment</li>
-      <li>Interviewing & Candidate Screening</li>
-      <li>HR Operations</li>
-      <li>Stakeholder Communication</li>
-      <li>ATS & Hiring Tools</li>
-    </ul>
+  <div class="skills">
+    <div class="skill">Talent Acquisition</div>
+    <div class="skill">Interviewing & Screening</div>
+    <div class="skill">HR Operations</div>
+    <div class="skill">Stakeholder Management</div>
+    <div class="skill">ATS & Hiring Tools</div>
+    <div class="skill">Candidate Experience</div>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section>
   <h2>Experience</h2>
-  <div class="card">
+  <div class="glass">
     <h3>Talent Acquisition Professional</h3>
     <p>
-      Worked on end-to-end recruitment, sourcing, screening, and coordinating with
-      hiring managers to close positions efficiently.
+      Managed end-to-end recruitment, collaborated with hiring managers,
+      optimized hiring pipelines, and ensured a smooth candidate experience
+      from sourcing to onboarding.
     </p>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section>
   <h2>Contact</h2>
-  <div class="card">
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>LinkedIn: <a href="#">Add your LinkedIn link</a></p>
+  <div class="glass">
+    <p>Email: <strong>youremail@example.com</strong></p>
+    <p>
+      <a href="#">LinkedIn</a> |
+      <a href="#">Resume</a>
+    </p>
   </div>
 </section>
 
 <footer>
-  © 2026 Karan. All rights reserved.
+  © 2026 Karan • Built with GitHub Pages
 </footer>
 
 </body>
